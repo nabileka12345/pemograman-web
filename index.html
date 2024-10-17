@@ -3,154 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desa pariwisata</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Penjumlahan</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+        }
+        #container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #container form {
+            margin-bottom: 20px;
+        }
+        #container form input[type="text"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #2900f4;
+        }
+        #container form button[type="button"] {
+            margin-left: 109px;
+            margin-right: -100px;
+            width: 300px;
+            height: 35px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #container form button[type="button"]:hover {
+            background-color: #c44e13;
+        }
+    </style>
 </head>
 <body>
+    <div id="container">
+        <h2>Penjumlahan</h2>
+        <form>
+            <p>Bilangan pertama</p>
+            <input type="text" id="bilangan_pertama" style="width: 379px;" placeholder="Bilangan pertama">
+            <p>Bilangan kedua</p>
+            <input type="text" id="bilangan_kedua" style="width: 379px;" placeholder="Bilangan kedua">
+            <button style="width: auto;" type="button" onclick="penjumlahan()">Jumlahkan</button>
+            <button style="width: auto;" type="button" onclick="resetForm()">Reset</button>
+            <!-- <p>Hasil: <span id="hasil"></span></p> -->
+            <h2>Hasil: <span id="hasil"></span></h2>
+        </form>
+    </div>
 
-<!-- Header -->
-        <header>
-            <div class="logo">
-                <img src="D:\foto web/logo kabupaten banyuwangi.png" alt="Logo">
-                <h1>Desa Pariwisata</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Profil Desa</a></li>
-                    <li><a href="#">Destinasi Wisata Desa</a></li>
-                    <li><a href="#">Pesona Desa</a></li>
-                </ul>
-            </nav>
-            <div class="help-center">
-                <button>Help Center</button>
-            </div>
-        </header>
-    </body>
-    </html>
-    <section class="banner">
-        <div class="content-wrapper">
-            <div class="text-content">
-                <h1>Welcome to Banyuwangi: <br>Adventure Awaits in Every Corner</h1>
-                <p>Desa Pariwisata Banyuwangi adalah konsep pengembangan wilayah pedesaan yang mengintegrasikan potensi alam, budaya, dan masyarakat lokal untuk menciptakan destinasi wisata yang menarik dan berkelanjutan.</p>
-            </div>
-            <div class="image-content">
-                <img src="D:\foto web/map indo.png" alt="Map of Banyuwangi" class="map-image">
-                <img src="D:\foto web/mobil.png" alt="Car Illustration" class="car-image">
-            </div>
-        </div>
-        <div class="search-bar">
-            <p>Silakan cari destinasi wisata yang ingin Anda kunjungi</p>
-            <div class="search-input">
-                <input type="text" placeholder="Tampilkan pencarianmu">
-                <button>Cari</button>
-            </div>
-        </div>
-    </section>
+    <script>
+        function penjumlahan() {
+            var bilangan_pertama = parseInt(document.getElementById("bilangan_pertama").value);
+            var bilangan_kedua = parseInt(document.getElementById("bilangan_kedua").value);
+            var hasil = bilangan_pertama + bilangan_kedua;
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+
+        function resetForm() {
+            document.getElementById("bilangan_pertama").value = "";
+            document.getElementById("bilangan_kedua").value = "";
+            document.getElementById("hasil").innerHTML = "";
+        }
+    </script>
 </body>
 </html>
-
-
-   <!-- Prinsip Section -->
-   <section class="principles-section" id="prinsip">
-    <h2>Bagaimana <span style="color: #6FCF97;">Prinsip</span> Kerja</h2>
-    <p>Berikut adalah empat prinsip kerja desa pariwisata Kabupaten Banyuwangi </h2>
-    <p> yang dapat dijadikan acuan dalam pengembangan dan pengelolaan destinasi wisata:</p>
-
-    <div class="principles-content">
-        <div class="principle-left">
-            <div class="principle-item">
-                <span class="principle-number">1</span>
-                <h3>Partisipasi dan Pemberdayaan Masyarakat Lokal</h3>
-                <p>Prinsip ini menekankan pentingnya keterlibatan aktif dan pemberdayaan masyarakat lokal dalam pengembangan desa wisata.</p>
-            </div>
-            <div class="principle-item">
-                <span class="principle-number">3</span>
-                <h3>Pelestarian dan Promosi Budaya Lokal</h3>
-                <p>Prinsip ini fokus pada upaya melestarikan dan mempromosikan budaya lokal agar tidak punah dan dapat terus dinikmati oleh wisatawan.</p>
-            </div>
-        </div>
-
-        <!-- Phone Image in Center -->
-        <div class="principle-center">
-            <img src="D:\foto web/hp.png" alt="Phone displaying website" class="phone-image">
-        </div>
-
-        <div class="principle-right">
-            <div class="principle-item">
-                <span class="principle-number">2</span>
-                <h3>Pengelolaan Lingkungan Berkelanjutan</h3>
-                <p>Desa wisata Banyuwangi harus menerapkan praktik-praktik yang berkelanjutan dan ramah lingkungan untuk menjaga kelestarian alam dan menghadapi tantangan terkait lingkungan.</p>
-            </div>
-            <div class="principle-item">
-                <span class="principle-number">4</span>
-                <h3>Inovasi dan Pemanfaatan Teknologi</h3>
-                <p>Mengadopsi inovasi dan teknologi untuk meningkatkan efisiensi pengelolaan desa wisata serta memperluas jangkauan promosi ke pasar yang lebih luas.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
- <!-- Destinasi -->
-<section class="destinations" id="destinations">
-    <h2><span style="color: #75BF7A;">Destinasi</span> wisata</h2>
-    <div class="destination-list">
-        
-        <!-- Item 1: Pantai Cacalan -->
-        <div class="destination-item">
-            <img src="D:\foto web/Cacalan.jpg" alt="Pantai Cacalan" class="destination-image1">
-            <div class="destination-overlay">
-                <h3><span class="destination-number">01.</span> Pantai Cacalan</h3>
-                <p>Pantai Cacalan berada di sebelah lingkungan Kelir, Kelurahan Klatak, Kecamatan Kalipuro, Kabupaten Banyuwangi.</p>
-            </div>
-        </div>
-
-        <!-- Item 2: Hutan Djawatan -->
-        <div class="destination-item">
-            <img src="D:\foto web/De-Djawatan.jpg" alt="Hutan Djawatan" class="destination-image2">
-            <div class="destination-overlay">
-                <h3><span class="destination-number">02.</span> Hutan Djawatan</h3>
-                <p>Hutan Djawatan merupakan tempat wisata alam dengan hutan hijau yang memikat.</p>
-            </div>
-        </div>
-
-        <!-- Item 3: Pantai Bangsring -->
-        <div class="destination-item">
-            <img src="D:\foto web/Bangsring.jpg" alt="Pantai Bangsring" class="destination-image3">
-            <div class="destination-overlay">
-                <h3><span class="destination-number">03.</span> Pantai Bangsring</h3>
-                <p>Pantai Bangsring dikelola oleh masyarakat setempat dalam wadah Pokmaswas Kelompok Nelayan.</p>
-            </div>
-        </div>
-        
-    </div>
-</section>
-
-
-<!-- Footer Section -->
-<footer id="contact">
-    <div class="footer-content">
-        <div class="footer-left">
-            <div class="footer-logo-container">
-                <img src="D:\foto web/logo-kominfo.png" alt="Logo Kominfo" class="footer-logo">
-                <div class="footer-contact">
-                    <p><strong>Contact</strong></p>
-                    <p>Jl. K.H. Agus Salim No.85, Taman Baru,<br> Mojopanggung, Kec. Banyuwangi,<br> Kabupaten Banyuwangi, Jawa Timur</p>
-                    <p>Email: kominfo.banyuwangikab@gmail.com</p>
-                    <p>Phone: (0333) 422400</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-right">
-            <p><strong>Follow Us</strong></p>
-            <ul class="social-links">
-                <li><a href="#"><img src="D:\foto web/facebook-logo-.png" alt="Facebook" class="social-logo"> Facebook</a></li>
-                <li><a href="#"><img src="D:\foto web/Twitter.png" alt="Twitter" class="social-logo"> Twitter</a></li>
-                <li><a href="#"><img src="D:\foto web/Instagram.png" alt="Instagram" class="social-logo"> Instagram</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>All Rights Reserved Website Desa Pariwisata by Kominfo 2024</p>
-    </div>
-</footer>

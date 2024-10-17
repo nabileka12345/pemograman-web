@@ -1,12 +1,22 @@
-function penjumlahan() {
-    var bilangan_pertama = parseInt(document.getElementById("bilangan_pertama").value);
-    var bilangan_kedua = parseInt(document.getElementById("bilangan_kedua").value);
-    var hasil = bilangan_pertama + bilangan_kedua;
-    document.getElementById("hasil").innerHTML = hasil;
+function input(value) {
+    const display = document.getElementById('display');
+    display.value += value;
 }
 
-function resetForm() {
-    document.getElementById("bilangan_pertama").value = "";
-    document.getElementById("bilangan_kedua").value = "";
-    document.getElementById("hasil").innerHTML = "";
+function clearDisplay() {
+    const display = document.getElementById('display');
+    display.value = '';
+}
+
+function calculate() {
+    const display = document.getElementById('display');
+    try {
+        display.value = eval(display.value);
+        display.classList.add('display-change');  // Tambahkan kelas animasi
+        setTimeout(() => {
+            display.classList.remove('display-change');  // Hapus setelah animasi selesai
+        }, 500); // Durasi sesuai dengan animasi di CSS
+    } catch (e) {
+        display.value = 'Error';
+    }
 }
